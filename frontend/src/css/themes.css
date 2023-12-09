@@ -1,0 +1,7 @@
+/* Themes */
+.light-theme {
+  background-color: hsla(0,0%,100%,1);
+}
+.dark-theme {
+  background-color: hsla(205,40.3%,15.1%,1);
+}

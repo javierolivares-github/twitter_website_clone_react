@@ -1,0 +1,34 @@
+/* Shadows for light theme */
+.effect-style-light-all {
+	box-shadow: 0px 0px 20px 1px rgba(20,116,184,0.080);
+}
+.effect-style-light-top {
+	box-shadow: 0px -8px 20px rgba(20,116,184,0.080), 0px 0px 20px 1px rgba(20,116,184,0.080);
+}
+.effect-style-light-right {
+	box-shadow: 8px 0px 20px rgba(20,116,184,0.080), 0px 0px 20px 1px rgba(20,116,184,0.080);
+}
+.effect-style-light-bottom {
+	box-shadow: 0px 8px 20px rgba(20,116,184,0.350), 0px 0px 20px 1px rgba(20,116,184,0.350);
+}
+.effect-style-light-left {
+	box-shadow: -8px 0px 20px rgba(20,116,184,0.080), 0px 0px 20px 1px rgba(20,116,184,0.080);
+}
+
+
+/* Shadows for dark theme */
+.effect-style-dark-all {
+	box-shadow: 0px 0px 20px 1px rgba(15,27,36,0.350);
+}
+.effect-style-dark-top {
+	box-shadow: 0px -8px 20px rgba(15,27,36,0.350), 0px 0px 20px 1px rgba(15,27,36,0.350);
+}
+.effect-style-dark-right {
+	box-shadow: 8px 0px 20px rgba(15,27,36,0.350), 0px 0px 20px 1px rgba(15,27,36,0.350);
+}
+.effect-style-dark-bottom {
+	box-shadow: 0px 8px 20px rgba(255,255,255,0.4), 0px 0px 20px 1px rgba(255,255,255,0.4);
+}
+.effect-style-dark-left {
+	box-shadow: -8px 0px 20px rgba(15,27,36,0.350), 0px 0px 20px 1px rgba(15,27,36,0.350);
+}
