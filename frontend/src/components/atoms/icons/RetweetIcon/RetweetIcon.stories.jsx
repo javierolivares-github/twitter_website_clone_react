@@ -1,9 +1,9 @@
-import AnalyticsIcon from './AnalyticsIcon';
+import RetweetIcon from './RetweetIcon';
 
-/** The **AnalyticsIcon** component renders an analytics icon. */
+/** The **RetweetIcon** component renders a retweet icon. */
 export default {
-  title: 'atoms/Icons/AnalyticsIcon',
-  component: AnalyticsIcon,
+  title: 'atoms/Icons/RetweetIcon',
+  component: RetweetIcon,
   tags: ['autodocs'],
   argTypes: {
     fill: {
@@ -21,7 +21,7 @@ export default {
   },
 };
 
-/** This is the filled version of the **AnalyticsIcon** component:*/
+/** This is the filled version of the **RetweetIcon** component:*/
 export const Filled = {
   args: {
     fill: '#172936',
@@ -30,7 +30,7 @@ export const Filled = {
   },
 };
 
-/** This is the outlined version of the **AnalyticsIcon** component:*/
+/** This is the outlined version of the **RetweetIcon** component:*/
 export const Outlined = {
   args: {
     fill: '#172936',

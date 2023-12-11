@@ -1,9 +1,9 @@
-import AnalyticsIcon from './AnalyticsIcon';
+import CircleIcon from './CircleIcon';
 
-/** The **AnalyticsIcon** component renders an analytics icon. */
+/** The **CircleIcon** component renders a circle icon. */
 export default {
-  title: 'atoms/Icons/AnalyticsIcon',
-  component: AnalyticsIcon,
+  title: 'atoms/Icons/CircleIcon',
+  component: CircleIcon,
   tags: ['autodocs'],
   argTypes: {
     fill: {
@@ -21,20 +21,10 @@ export default {
   },
 };
 
-/** This is the filled version of the **AnalyticsIcon** component:*/
+/** This is the default version of the **CircleIcon** component:*/
 export const Filled = {
   args: {
     fill: '#172936',
     size: '24',
-    isFilled: true,
-  },
-};
-
-/** This is the outlined version of the **AnalyticsIcon** component:*/
-export const Outlined = {
-  args: {
-    fill: '#172936',
-    size: '24',
-    isFilled: false,
   },
 };

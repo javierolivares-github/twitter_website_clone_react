@@ -14,7 +14,7 @@ describe('AnalyticsIcon', () => {
     render(
       <AnalyticsIcon size="24" fill="#000000" isFilled={false}/>
     );
-    const svgElement = screen.getByTestId('icon-outline-container');
+    const svgElement = screen.getByTestId('analyticsIcon-outline');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement.tagName).toBe('svg');  
   });
@@ -23,7 +23,7 @@ describe('AnalyticsIcon', () => {
     render(
       <AnalyticsIcon size="24" fill="#000000" isFilled={false}/>
     );
-    const svgElement = screen.getByTestId('icon-outline-container');
+    const svgElement = screen.getByTestId('analyticsIcon-outline');
     expect(svgElement).toHaveAttribute('width', '24');
     expect(svgElement).toHaveAttribute('height', '24');
   });
@@ -32,7 +32,7 @@ describe('AnalyticsIcon', () => {
     render(
       <AnalyticsIcon size="24" fill="#000000" isFilled={false}/>
     );
-    const pathElement = screen.getByTestId('icon-outline-content');
+    const pathElement = screen.getByTestId('analyticsIcon-outline-content');
     expect(pathElement).toHaveAttribute('fill', '#000000');
   });
 
@@ -40,8 +40,8 @@ describe('AnalyticsIcon', () => {
     render(
       <AnalyticsIcon size="24" fill="#000000" isFilled={false}/>
     );
-    const svgElement = screen.getByTestId('icon-outline-container');
-    expect(svgElement).toHaveAttribute('data-testid', 'icon-outline-container');
+    const svgElement = screen.getByTestId('analyticsIcon-outline');
+    expect(svgElement).toHaveAttribute('data-testid', 'analyticsIcon-outline');
   });
 
 

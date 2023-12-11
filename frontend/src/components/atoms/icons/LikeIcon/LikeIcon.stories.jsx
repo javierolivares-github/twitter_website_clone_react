@@ -1,9 +1,9 @@
-import AnalyticsIcon from './AnalyticsIcon';
+import LikeIcon from './LikeIcon';
 
-/** The **AnalyticsIcon** component renders an analytics icon. */
+/** The **LikeIcon** component renders a like icon. */
 export default {
-  title: 'atoms/Icons/AnalyticsIcon',
-  component: AnalyticsIcon,
+  title: 'atoms/Icons/LikeIcon',
+  component: LikeIcon,
   tags: ['autodocs'],
   argTypes: {
     fill: {
@@ -21,7 +21,7 @@ export default {
   },
 };
 
-/** This is the filled version of the **AnalyticsIcon** component:*/
+/** This is the filled version of the **LikeIcon** component:*/
 export const Filled = {
   args: {
     fill: '#172936',
@@ -30,7 +30,7 @@ export const Filled = {
   },
 };
 
-/** This is the outlined version of the **AnalyticsIcon** component:*/
+/** This is the outlined version of the **LikeIcon** component:*/
 export const Outlined = {
   args: {
     fill: '#172936',
