@@ -3,12 +3,6 @@ import { describe, expect, test } from "vitest";
 import HomeIcon from "./HomeIcon";
 
 describe('HomeIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <HomeIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
 
   test('The component should render a svg element.', () => {
     render(

@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import RetweetIcon from "./RetweetIcon";
 
 describe('RetweetIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <RetweetIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <RetweetIcon size="24" fill="#172936" isFilled={false}/>

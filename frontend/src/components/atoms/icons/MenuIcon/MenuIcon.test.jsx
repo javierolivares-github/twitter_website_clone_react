@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import MenuIcon from "./MenuIcon";
 
 describe('MenuIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <MenuIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <MenuIcon size="24" fill="#172936" />

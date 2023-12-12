@@ -3,17 +3,11 @@ import { describe, expect, test } from "vitest";
 import BookmarksIcon from "./BookmarksIcon";
 
 describe('BookmarksIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <BookmarksIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <BookmarksIcon size="24" fill="#172936" isFilled={false}/>
     );
+    // screen.debug();
     const svgElement = screen.getByTestId('bookmarks-outline');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement.tagName).toBe('svg');  

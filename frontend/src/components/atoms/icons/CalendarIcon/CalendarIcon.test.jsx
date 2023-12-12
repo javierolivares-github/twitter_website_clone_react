@@ -3,17 +3,12 @@ import { describe, expect, test } from "vitest";
 import CalendarIcon from "./CalendarIcon";
 
 describe('CalendarIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <CalendarIcon size="24" fill="#172936" />
-    );
-    screen.debug();  
-  });
 
   test('The component should render a svg element.', () => {
     render(
       <CalendarIcon size="24" fill="#172936" />
     );
+    // screen.debug();
     const svgElement = screen.getByTestId('calendar-container');
     expect(svgElement).toBeInTheDocument();
     expect(svgElement.tagName).toBe('svg');  

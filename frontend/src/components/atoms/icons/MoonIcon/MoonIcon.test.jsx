@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import MoonIcon from "./MoonIcon";
 
 describe('MoonIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <MoonIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <MoonIcon size="24" fill="#172936" isFilled={false}/>

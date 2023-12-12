@@ -10,7 +10,7 @@ describe('Body2', () => {
         This is the Body2 bold component!
       </Body2>
     );
-    screen.debug();  
+    // screen.debug();  
     const Body2Element = screen.getByTestId('body2-container');
     expect(Body2Element).toBeInTheDocument();
     expect(Body2Element.tagName).toBe('P');

@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import SendIcon from "./SendIcon";
 
 describe('SendIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <SendIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <SendIcon size="24" fill="#172936" />

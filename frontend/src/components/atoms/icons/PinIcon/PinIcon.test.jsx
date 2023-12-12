@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import PinIcon from "./PinIcon";
 
 describe('PinIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <PinIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <PinIcon size="24" fill="#172936" />

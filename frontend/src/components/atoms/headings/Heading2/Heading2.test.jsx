@@ -10,7 +10,7 @@ describe('Heading2', () => {
         This is the Heading2 bold component!
       </Heading2>
     );
-    screen.debug();  
+    // screen.debug();  
     const headingElement = screen.getByTestId('heading2-container');
     expect(headingElement).toBeInTheDocument();
     expect(headingElement.tagName).toBe('H3');

@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import SearchIcon from "./SearchIcon";
 
 describe('SearchIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <SearchIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <SearchIcon size="24" fill="#172936" />

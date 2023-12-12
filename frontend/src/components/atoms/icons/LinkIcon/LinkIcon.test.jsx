@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import LinkIcon from "./LinkIcon";
 
 describe('LinkIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <LinkIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <LinkIcon size="24" fill="#172936" />

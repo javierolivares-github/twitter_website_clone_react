@@ -3,14 +3,6 @@ import { describe, expect, test } from "vitest";
 import AdsIcon from "./AdsIcon";
 
 describe('AdsIcon', () => {
-
-  test('Should renders the AdsIcon component.', () => {
-    render(
-      <AdsIcon size="24" fill="#9747FF"/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <AdsIcon size="24" fill="#9747FF"/>

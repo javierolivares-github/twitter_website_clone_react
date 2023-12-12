@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import ShareIcon from "./ShareIcon";
 
 describe('ShareIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <ShareIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <ShareIcon size="24" fill="#172936" />

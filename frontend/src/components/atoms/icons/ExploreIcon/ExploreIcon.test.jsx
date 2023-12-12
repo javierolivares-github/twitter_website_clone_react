@@ -3,12 +3,6 @@ import { describe, expect, test } from "vitest";
 import ExploreIcon from "./ExploreIcon";
 
 describe('ExploreIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <ExploreIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
 
   test('The component should render a svg element.', () => {
     render(

@@ -3,12 +3,6 @@ import { describe, expect, test } from "vitest";
 import ImagesIcon from "./ImagesIcon";
 
 describe('ImagesIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <ImagesIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
 
   test('The component should render a svg element.', () => {
     render(

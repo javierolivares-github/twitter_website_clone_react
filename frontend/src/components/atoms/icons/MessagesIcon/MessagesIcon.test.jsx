@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import MessagesIcon from "./MessagesIcon";
 
 describe('MessagesIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <MessagesIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <MessagesIcon size="24" fill="#172936" isFilled={false}/>

@@ -3,12 +3,6 @@ import { describe, expect, test } from "vitest";
 import CommentIcon from "./CommentIcon";
 
 describe('CommentIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <CommentIcon size="24" fill="#172936" />
-    );
-    screen.debug();  
-  });
 
   test('The component should render a svg element.', () => {
     render(

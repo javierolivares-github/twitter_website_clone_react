@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import OfficialIcon from "./OfficialIcon";
 
 describe('OfficialIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <OfficialIcon size="24" fill="#172936" />
-    );
-    screen.debug();
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <OfficialIcon size="24" fill="#172936" />

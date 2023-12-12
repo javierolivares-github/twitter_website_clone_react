@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import AnalyticsIcon from "./AnalyticsIcon";
 
 describe('AnalyticsIcon', () => {
-  test('Should renders the AnalyticsIcon component.', () => {
-    render(
-      <AnalyticsIcon size="24" fill="#9747FF" isFilled={false}/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <AnalyticsIcon size="24" fill="#000000" isFilled={false}/>

@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import MoreIcon from "./MoreIcon";
 
 describe('MoreIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <MoreIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <MoreIcon size="24" fill="#172936" isFilled={false}/>

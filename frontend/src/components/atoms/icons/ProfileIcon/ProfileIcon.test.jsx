@@ -3,13 +3,6 @@ import { describe, expect, test } from "vitest";
 import ProfileIcon from "./ProfileIcon";
 
 describe('ProfileIcon', () => {
-  test('Should renders the component.', () => {
-    render(
-      <ProfileIcon size="24" fill="#172936" isFilled={false}/>
-    );
-    screen.debug();  
-  });
-
   test('The component should render a svg element.', () => {
     render(
       <ProfileIcon size="24" fill="#172936" isFilled={false}/>
