@@ -18,7 +18,7 @@ export default CalendarIcon;
 
 CalendarIcon.propTypes = {
   fill: PropTypes.string,
-  size: PropTypes.oneOf(["16", "20", "24", "28", "32"]),
+  size: PropTypes.oneOf(["16", "18", "20", "22", "24", "26", "28", "30", "32"]),
 }
 
 CalendarIcon.defaultProps = {
