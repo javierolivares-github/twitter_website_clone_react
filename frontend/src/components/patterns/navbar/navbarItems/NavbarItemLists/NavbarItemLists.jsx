@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../../../../../index.css';
-import HomeIcon from '../../../../atoms/icons/HomeIcon';
+import ListsIcon from '../../../../atoms/icons/ListsIcon';
 import Heading1 from '../../../../atoms/headings/Heading1';
 
 
-const NavbarItemHome = ({ isDarkTheme, isHomeActive, onClick }) => {
+const NavbarItemLists = ({ isDarkTheme, isHomeActive, onClick }) => {
   return (
     <li 
-      data-testid="navbar-item-container"
+      data-testid="navbar-item-lists-container"
       className={`inline-flex justify-start items-center gap-3 p-3 
       rounded-full cursor-pointer transition-all duration-200 
       ease-in-out
@@ -21,8 +21,8 @@ const NavbarItemHome = ({ isDarkTheme, isHomeActive, onClick }) => {
     >
       {/* Icon */}
       {isHomeActive ? 
-        <HomeIcon fill={isDarkTheme ? '#FFFFFF' : '#172936'} size="24" isFilled/> : 
-        <HomeIcon fill={isDarkTheme ? '#FFFFFF' : '#172936'} size="24"/>
+        <ListsIcon fill={isDarkTheme ? '#FFFFFF' : '#172936'} size="24" isFilled/> : 
+        <ListsIcon fill={isDarkTheme ? '#FFFFFF' : '#172936'} size="24"/>
       }
 
       {/* Label */}
@@ -30,22 +30,22 @@ const NavbarItemHome = ({ isDarkTheme, isHomeActive, onClick }) => {
         isDarkTheme={isDarkTheme}
         weight={isHomeActive ? 'font-bold' : 'font-normal'}
       >
-        Home
+        Lists
       </Heading1>
     </li>
   )
 };
 
 
-export default NavbarItemHome;
+export default NavbarItemLists;
 
-NavbarItemHome.propTypes = {
+NavbarItemLists.propTypes = {
   isDarkTheme: PropTypes.bool,
   isHomeActive: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
-NavbarItemHome.defaultProps = {
+NavbarItemLists.defaultProps = {
   isDarkTheme: false,
   isHomeActive: false,
   onClick: undefined,

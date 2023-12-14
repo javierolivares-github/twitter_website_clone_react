@@ -6,7 +6,7 @@ describe('Heading2', () => {
 
   test('should renders the Heading2 component, the correct h3 html tag, and a text inside', () => {
     render(
-      <Heading2 weight='font-bold' isDarkTheme={false}>
+      <Heading2 weight='font-bold' color="text-secondary-15">
         This is the Heading2 bold component!
       </Heading2>
     );
@@ -19,9 +19,9 @@ describe('Heading2', () => {
     );
   });
 
-  test('when weight prop is font-bold, should has the TailwindCSS font-bold class', () => {
+  test('when weight prop is font-bold, should have the class font-bold', () => {
     render(
-      <Heading2 weight='font-bold' isDarkTheme={false}>
+      <Heading2 weight='font-bold' color="text-secondary-15">
         This is the Heading2 bold component!
       </Heading2>
     );
@@ -29,9 +29,9 @@ describe('Heading2', () => {
     expect(headingElement).toHaveClass('font-bold');
   });
 
-  test('when isDarkTheme prop is false, should has the custom TailwindCSS text-secondary-15 class', () => {
+  test('When color prop is text-secondary-15, should have the class text-secondary-15', () => {
     render(
-      <Heading2 weight='font-bold' isDarkTheme={false}>
+      <Heading2 weight='font-bold' color="text-secondary-15">
         This is the Heading2 bold component!
       </Heading2>
     );

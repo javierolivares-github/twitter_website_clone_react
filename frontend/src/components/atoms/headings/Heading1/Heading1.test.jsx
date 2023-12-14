@@ -4,13 +4,12 @@ import Heading1 from "./Heading1";
 
 describe('Heading1', () => {
 
-  test('should renders the heading1 component, the correct h2 html tag, and a text inside', () => {
+  test('Should renders the heading1 component, the correct h2 html tag, and a text inside', () => {
     render(
-      <Heading1 weight='font-bold' isDarkTheme={false}>
+      <Heading1 weight='font-bold' color="text-secondary-15">
         This is the Heading1 bold component!
       </Heading1>
     );
-    // screen.debug();  
     const headingElement = screen.getByTestId('heading1-container');
     expect(headingElement).toBeInTheDocument();
     expect(headingElement.tagName).toBe('H2');
@@ -19,9 +18,9 @@ describe('Heading1', () => {
     );
   });
 
-  test('when weight prop is font-bold, should has the TailwindCSS font-bold class', () => {
+  test('When weight prop is font-bold, should has the class font-bold', () => {
     render(
-      <Heading1 weight='font-bold' isDarkTheme={false}>
+      <Heading1 weight='font-bold' color="text-secondary-15">
         This is the Heading1 bold component!
       </Heading1>
     );
@@ -29,9 +28,9 @@ describe('Heading1', () => {
     expect(headingElement).toHaveClass('font-bold');
   });
 
-  test('when isDarkTheme prop is false, should has the custom TailwindCSS text-secondary-15 class', () => {
+  test('when color prop is text-secondary-15, should have the class text-secondary-15', () => {
     render(
-      <Heading1 weight='font-bold' isDarkTheme={false}>
+      <Heading1 weight='font-bold' color="text-secondary-15">
         This is the Heading1 bold component!
       </Heading1>
     );

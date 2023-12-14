@@ -1,9 +1,9 @@
-import NavbarItemHome from './NavbarItemHome';
+import NavbarItemLists from './NavbarItemLists';
 
-/** The **NavbarItemHome** component renders a navbar's item. When the component is hovered over, it changes to its hover style. Clicking on the component activates a function, which its passed via props. */
+/** The **NavbarItemLists** component renders a navbar's item. When the component is hovered over, it changes to its hover style. Clicking on the component activates a function, which its passed via props. */
 export default {
-  title: 'patterns/Navbar/NavbarItems/NavbarItemHome',
-  component: NavbarItemHome,
+  title: 'patterns/Navbar/NavbarItems/NavbarItemLists',
+  component: NavbarItemLists,
   tags: ['autodocs'],
   argTypes: {
     isDarkTheme: {
@@ -20,7 +20,7 @@ export default {
   },
 };
 
-/** This is the light default version of the **NavbarItemHome** component:*/
+/** This is the light default version of the **NavbarItemLists** component:*/
 export const LightDefault = {
   args: {
     isDarkTheme: false,
@@ -28,7 +28,7 @@ export const LightDefault = {
   },
 };
 
-/** This is the light active version of the **NavbarItemHome** component:*/
+/** This is the light active version of the **NavbarItemLists** component:*/
 export const LightActive = {
   args: {
     isDarkTheme: false,
@@ -36,7 +36,7 @@ export const LightActive = {
   },
 };
 
-/** This is the dark default version of the **NavbarItemHome** component:*/
+/** This is the dark default version of the **NavbarItemLists** component:*/
 export const DarkDefault = {
   args: {
     isDarkTheme: true,
@@ -44,7 +44,7 @@ export const DarkDefault = {
   },
 };
 
-/** This is the dark active version of the **NavbarItemHome** component:*/
+/** This is the dark active version of the **NavbarItemLists** component:*/
 export const DarkActive = {
   args: {
     isDarkTheme: true,

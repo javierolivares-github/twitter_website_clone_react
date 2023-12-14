@@ -26,7 +26,7 @@ describe('HomeIcon', () => {
     render(
       <HomeIcon size="24" fill="#172936" isFilled={false}/>
     );
-    const pathElement = screen.getByTestId('home-outline-content');
+    const pathElement = screen.getByTestId('home-icon-outline-content');
     expect(pathElement).toHaveAttribute('fill', '#172936');
   });
 
