@@ -10,12 +10,9 @@ export default {
       description: 'Specifies the style of the component. If it is true, renders a dark version of the component. If it is false, renders a light version of the component.',
       control: 'boolean',
     },
-    isHomeActive: {
+    isActive: {
       description: 'Specifies whether the component is active or not. When it is active, it has an active CSS style. When it is not, it has a default CSS style.',
       control: 'boolean',
-    },
-    onClick: {
-      description: 'Event. When the component is clicked, fires a function.',
     },
   },
 };
@@ -24,7 +21,7 @@ export default {
 export const LightDefault = {
   args: {
     isDarkTheme: false,
-    isHomeActive: false,
+    isActive: false,
   },
 };
 
@@ -32,7 +29,7 @@ export const LightDefault = {
 export const LightActive = {
   args: {
     isDarkTheme: false,
-    isHomeActive: true,
+    isActive: true,
   },
 };
 
@@ -40,7 +37,7 @@ export const LightActive = {
 export const DarkDefault = {
   args: {
     isDarkTheme: true,
-    isHomeActive: false,
+    isActive: false,
   },
 };
 
@@ -48,6 +45,6 @@ export const DarkDefault = {
 export const DarkActive = {
   args: {
     isDarkTheme: true,
-    isHomeActive: true,
+    isActive: true,
   },
 };

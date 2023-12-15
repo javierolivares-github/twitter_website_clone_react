@@ -5,22 +5,21 @@ import ExploreIcon from '../../../../atoms/icons/ExploreIcon';
 import Heading1 from '../../../../atoms/headings/Heading1';
 
 
-const NavbarItemExplore = ({ isDarkTheme, isHomeActive, onClick }) => {
+const NavbarItemExplore = ({ isDarkTheme, isActive }) => {
   return (
     <li 
       data-testid="navbar-item-explore-container"
       className={`inline-flex justify-start items-center gap-3 p-3 
       rounded-full cursor-pointer transition-all duration-200 
       ease-in-out
-      ${!isDarkTheme & !isHomeActive && 'hover:bg-primary-98'}
-      ${!isDarkTheme & isHomeActive && 'bg-primary-90 hover:bg-primary-90'}
-      ${isDarkTheme & !isHomeActive && 'hover:bg-transparent-10'}
-      ${isDarkTheme & isHomeActive && 'bg-transparent-25 hover:bg-transparent-25'}
+      ${!isDarkTheme & !isActive && 'hover:bg-primary-98'}
+      ${!isDarkTheme & isActive && 'bg-primary-90 hover:bg-primary-90'}
+      ${isDarkTheme & !isActive && 'hover:bg-transparent-10'}
+      ${isDarkTheme & isActive && 'bg-transparent-25 hover:bg-transparent-25'}
       `}
-      onClick={onClick}
     >
       {/* Icon */}
-      {isHomeActive ? 
+      {isActive ? 
         <ExploreIcon fill={isDarkTheme ? '#FFFFFF' : '#172936'} size="24" isFilled/> : 
         <ExploreIcon fill={isDarkTheme ? '#FFFFFF' : '#172936'} size="24"/>
       }
@@ -28,7 +27,7 @@ const NavbarItemExplore = ({ isDarkTheme, isHomeActive, onClick }) => {
       {/* Label */}
       <Heading1
         color={isDarkTheme ? "text-gray-100" : "text-secondary-100"}
-        weight={isHomeActive ? 'font-bold' : 'font-normal'}
+        weight={isActive ? 'font-bold' : 'font-normal'}
       >
         Explore
       </Heading1>
@@ -41,12 +40,10 @@ export default NavbarItemExplore;
 
 NavbarItemExplore.propTypes = {
   isDarkTheme: PropTypes.bool,
-  isHomeActive: PropTypes.bool,
-  onClick: PropTypes.func,
+  isActive: PropTypes.bool,
 };
 
 NavbarItemExplore.defaultProps = {
   isDarkTheme: false,
-  isHomeActive: false,
-  onClick: undefined,
+  isActive: false,
 }

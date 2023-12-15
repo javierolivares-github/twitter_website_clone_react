@@ -1,9 +1,9 @@
-import NavbarItemBookmarks from './NavbarItemBookmarks';
+import NavbarWrapper from './NavbarWrapper';
 
-/** The **NavbarItemBookmarks** component renders a navbar's item. When the component is hovered over, it changes to its hover style. Clicking on the component activates a function, which its passed via props. */
+/** The **NavbarWrapper** component renders a navbar's content. When the component is hovered over, it changes to its hover style. Clicking on the component activates a function, which its passed via props. */
 export default {
-  title: 'patterns/Navbar/NavbarItems/NavbarItemBookmarks',
-  component: NavbarItemBookmarks,
+  title: 'patterns/Navbar/NavbarWrapper',
+  component: NavbarWrapper,
   tags: ['autodocs'],
   argTypes: {
     isDarkTheme: {
@@ -17,7 +17,7 @@ export default {
   },
 };
 
-/** This is the light default version of the **NavbarItemBookmarks** component:*/
+/** This is the light default version of the **NavbarWrapper** component:*/
 export const LightDefault = {
   args: {
     isDarkTheme: false,
@@ -25,7 +25,7 @@ export const LightDefault = {
   },
 };
 
-/** This is the light active version of the **NavbarItemBookmarks** component:*/
+/** This is the light active version of the **NavbarWrapper** component:*/
 export const LightActive = {
   args: {
     isDarkTheme: false,
@@ -33,18 +33,18 @@ export const LightActive = {
   },
 };
 
-/** This is the dark default version of the **NavbarItemBookmarks** component:*/
+/** This is the dark default version of the **NavbarWrapper** component:*/
 export const DarkDefault = {
   args: {
     isDarkTheme: true,
-    isHomeActive: false,
+    isActive: false,
   },
 };
 
-/** This is the dark active version of the **NavbarItemBookmarks** component:*/
+/** This is the dark active version of the **NavbarWrapper** component:*/
 export const DarkActive = {
   args: {
     isDarkTheme: true,
-    isHomeActive: true,
+    isActive: true,
   },
 };

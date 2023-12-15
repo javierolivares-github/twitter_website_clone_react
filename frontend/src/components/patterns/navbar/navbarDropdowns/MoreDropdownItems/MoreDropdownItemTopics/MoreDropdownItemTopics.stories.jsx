@@ -10,9 +10,6 @@ export default {
       description: 'Specifies the style of the component.',
       control: 'boolean',
     },
-    onClick: {
-      description: 'Event. When the element is clicked, fires a custom function.',
-    },
   },
 };
 

@@ -1,9 +1,9 @@
-import ProfileDropdownHeader from './ProfileDropdownHeader';
+import ProfileDropdown from './ProfileDropdown';
 
-/** The **ProfileDropdownHeader** component renders a dropdown header. */
+/** The **ProfileDropdown** component renders a profile's dropdown. */
 export default {
-  title: 'patterns/Navbar/ProfileDropdown/ProfileDropdownHeader',
-  component: ProfileDropdownHeader,
+  title: 'patterns/Navbar/ProfileDropdown/ProfileDropdown',
+  component: ProfileDropdown,
   tags: ['autodocs'],
   argTypes: {
     imageUrl: {
@@ -22,10 +22,16 @@ export default {
       description: 'Specifies the style of the component. If it is true, renders a dark version of the component. If it is false, renders a light version of the component.',
       control: 'boolean',
     },
+    onClick1: {
+      description: 'Event. When the button is clicked, fires the custom function 1.',
+    },
+    onClick2: {
+      description: 'Event. When the button is clicked, fires the custom function 2.',
+    },
   },
 };
 
-/** This is the light version of the **ProfileDropdownHeader** component:*/
+/** This is the light version of the **ProfileDropdown** component:*/
 export const Light = {
   args: {
     imageUrl: "../../../../../assets/profile2.png",
@@ -35,7 +41,7 @@ export const Light = {
   },
 };
 
-/** This is the dark version of the **ProfileDropdownHeader** component:*/
+/** This is the dark version of the **ProfileDropdown** component:*/
 export const Dark = {
   args: {
     imageUrl: "../../../../../assets/profile2.png",

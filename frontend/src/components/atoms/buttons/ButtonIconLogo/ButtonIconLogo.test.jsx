@@ -7,7 +7,6 @@ describe('ButtonIconLogo', () => {
     render(
       <ButtonIconLogo isDarkTheme />
     );
-    // screen.debug();
     const buttonElement = screen.getByTestId('button-logo-container');
     expect(buttonElement).toBeInTheDocument();
     expect(buttonElement.tagName).toBe('BUTTON');
@@ -27,15 +26,5 @@ describe('ButtonIconLogo', () => {
     );
     const buttonElement = screen.getByTestId('button-logo-container');
     expect(buttonElement).toHaveClass('hover:bg-primary-98');
-  });
-
-  test("Should calls a callback function when the button is pressed", () => {
-    const handleClick = vi.fn();
-    render(
-      <ButtonIconLogo onClick={handleClick} />
-    );
-    const buttonElement = screen.getByTestId('button-logo-container');
-    fireEvent.click(buttonElement);
-    expect(handleClick).toHaveBeenCalledOnce();
   });
 })

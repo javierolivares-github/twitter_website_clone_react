@@ -10,9 +10,6 @@ export default {
       description: 'Specifies the style of the button. If isDarkTheme is true, renders a dark version of the button. If is false, renders a light version of the button.',
       control: 'boolean',
     },
-    onClick: {
-      description: 'Event. When the button is clicked, triggers a function.',
-    },
   },
 };
 
