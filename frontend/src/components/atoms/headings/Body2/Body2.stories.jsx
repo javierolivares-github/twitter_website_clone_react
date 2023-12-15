@@ -10,9 +10,9 @@ export default {
       description: 'Specifies the content of the text.',
       control: 'text',
     },
-    isDarkTheme: {
-      description: 'Specifies the color of the text. If is true, the color is text-gray-100. If is false, the color is text-secondary-15',
-      control: 'boolean',
+    color: {
+      description: 'Specifies the text-color of the heading. It must be a CSS class or a TailwindCSS class.',
+      control: 'text',
     },
     weight: {
       description: 'Specifies the font weight of the text. It must be one of these:',
@@ -25,7 +25,7 @@ export default {
 export const Bold = {
   args: {
     children: 'This is a Body2 bold component!',
-    isDarkTheme: false,
+    color: "text-secondary-15",
     weight: 'font-bold',
   },
 };
@@ -34,7 +34,7 @@ export const Bold = {
 export const SemiBold = {
   args: {
     children: 'This is a Body2 semibold component!',
-    isDarkTheme: false,
+    color: "text-secondary-15",
     weight: 'font-semibold',
   },
 };
@@ -43,7 +43,7 @@ export const SemiBold = {
 export const Medium = {
   args: {
     children: 'This is a Body2 medium component!',
-    isDarkTheme: false,
+    color: "text-secondary-15",
     weight: 'font-medium',
   },
 };
@@ -52,7 +52,7 @@ export const Medium = {
 export const Regular = {
   args: {
     children: 'This is a Body2 regular component!',
-    isDarkTheme: false,
+    color: "text-secondary-15",
     weight: 'font-normal',
   },
 };
@@ -61,8 +61,7 @@ export const Regular = {
 export const Light = {
   args: {
     children: 'This is a Body2 light component!',
-    isDarkTheme: false,
+    color: "text-secondary-15",
     weight: 'font-light',
   },
 };
-

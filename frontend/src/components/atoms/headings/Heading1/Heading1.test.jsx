@@ -28,7 +28,7 @@ describe('Heading1', () => {
     expect(headingElement).toHaveClass('font-bold');
   });
 
-  test('when color prop is text-secondary-15, should have the class text-secondary-15', () => {
+  test('When color prop is text-secondary-15, should have the class text-secondary-15', () => {
     render(
       <Heading1 weight='font-bold' color="text-secondary-15">
         This is the Heading1 bold component!

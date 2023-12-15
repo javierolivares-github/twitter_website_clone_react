@@ -20,3 +20,9 @@ Heading1.propTypes = {
   color: PropTypes.string,
   weight: PropTypes.oneOf(["font-bold", "font-semibold", "font-medium", "font-normal", "font-light"]),
 }
+
+Heading1.defaultProps = {
+  children: 'This is a Heading2',
+  color: "text-secondary-15",
+  weight: 'font-bold',
+}

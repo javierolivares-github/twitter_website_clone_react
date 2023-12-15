@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import ProfileImage from '../../../../atoms/images/ProfileImage';
 import Icon from '../../../../atoms/icons/Icon';
 

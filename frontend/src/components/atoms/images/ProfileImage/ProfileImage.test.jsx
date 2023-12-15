@@ -9,7 +9,6 @@ describe('ProfileImage', () => {
         imageUrl="../../../../../public/assets/profile3.png" 
       />
     );
-    screen.debug();
     const imgElement = screen.getByTestId('profile-img-container');
     expect(imgElement).toBeInTheDocument();
     expect(imgElement.tagName).toBe('IMG');

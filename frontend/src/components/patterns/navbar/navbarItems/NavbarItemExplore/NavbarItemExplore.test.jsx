@@ -17,7 +17,6 @@ describe('NavbarItemExplore', () => {
     render(
       <NavbarItemExplore isDarkTheme={true} isHomeActive={false} />
     );
-    // screen.debug();
     const liElement = screen.getByTestId('navbar-item-explore-container');
     const pathElement = screen.getByTestId('explore-outline-content');
     expect(liElement).toHaveClass('hover:bg-transparent-10');

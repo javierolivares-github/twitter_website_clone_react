@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { Context } from '../../../../utilities/Context';
-import ProfileDropdownUsername from './navbarDropdownItems/ProfileDropdownUsername';
-import ProfileDropdownItem from './navbarDropdownItems/ProfileDropdownItem';
-import HorizontalBorder from '../../../atoms/borders/HorizontalBorder';
+import { Context } from '../../../../../utilities/Context';
+import ProfileDropdownUsername from '../ProfileDropdownUsername';
+import ProfileDropdownItem from '../ProfileDropdownItem';
+import HorizontalBorder from '../../../../atoms/borders/HorizontalBorder';
 
 
 const ProfileDropdown = ({ username, account, isDarkTheme }) => {

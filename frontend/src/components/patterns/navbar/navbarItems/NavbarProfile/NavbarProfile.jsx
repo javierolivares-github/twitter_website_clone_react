@@ -27,7 +27,7 @@ const NavbarProfile = ({ imageUrl, username, account, isDarkTheme, onClick }) =>
         </Heading2>
 
         {/* text: account */}
-        <Body2 weight="font-normal" isDarkTheme={isDarkTheme} >
+        <Body2 weight="font-normal" color={isDarkTheme ? "text-gray-100" : "text-secondary-40"} >
           {account}
         </Body2>
       </div>

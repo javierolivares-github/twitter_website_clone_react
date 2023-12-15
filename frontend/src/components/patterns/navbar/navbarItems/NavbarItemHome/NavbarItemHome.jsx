@@ -27,7 +27,7 @@ const NavbarItemHome = ({ isDarkTheme, isHomeActive, onClick }) => {
 
       {/* Label */}
       <Heading1
-        isDarkTheme={isDarkTheme}
+        color={isDarkTheme ? "text-gray-100" : "text-secondary-15"}
         weight={isHomeActive ? 'font-bold' : 'font-normal'}
       >
         Home

@@ -6,7 +6,7 @@ describe('Body2', () => {
 
   test('should renders the Body2 component, the correct p html tag, and a text inside', () => {
     render(
-      <Body2 weight='font-bold' isDarkTheme={false}>
+      <Body2 weight='font-bold' color="text-secondary-15">
         This is the Body2 bold component!
       </Body2>
     );
@@ -21,7 +21,7 @@ describe('Body2', () => {
 
   test('when weight prop is font-bold, should has the TailwindCSS font-bold class', () => {
     render(
-      <Body2 weight='font-bold' isDarkTheme={false}>
+      <Body2 weight='font-bold' color="text-secondary-15">
         This is the Body2 bold component!
       </Body2>
     );
@@ -29,9 +29,9 @@ describe('Body2', () => {
     expect(Body2Element).toHaveClass('font-bold');
   });
 
-  test('when isDarkTheme prop is false, should has the custom TailwindCSS text-secondary-15 class', () => {
+  test('When color prop is text-secondary-15, the component should have the class text-secondary-15', () => {
     render(
-      <Body2 weight='font-bold' isDarkTheme={false}>
+      <Body2 weight='font-bold' color="text-secondary-15">
         This is the Body2 bold component!
       </Body2>
     );

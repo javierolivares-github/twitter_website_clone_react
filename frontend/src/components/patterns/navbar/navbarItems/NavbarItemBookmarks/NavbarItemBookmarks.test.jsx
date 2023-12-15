@@ -24,7 +24,7 @@ describe('NavbarItemBookmarks', () => {
     expect(pathElement).toHaveAttribute('fill', '#FFFFFF');
   });
 
-  test('When isHomeActive is true, the component should have the CSS class hover:bg-primary-90, and the font-weight of the text should be bold', () => {
+  test('When isHomeActive is true, the component should have the CSS class hover:bg-primary-90, and the font-weight should be bold', () => {
     render(
       <NavbarItemBookmarks isDarkTheme={false} isHomeActive={true} />
     );
