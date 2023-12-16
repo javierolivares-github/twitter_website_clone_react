@@ -13,8 +13,10 @@ const ProfileDropdownHeader = ({ imageUrl, username, account, isDarkTheme }) => 
     >
       
       {/* Image */}
-      <ProfileImage imageUrl={imageUrl} size={`40px`}/>
-
+      <div className="w-10 h-10">
+        <ProfileImage imageUrl={imageUrl}/>
+      </div>
+      
       {/* Texts */}
       <div className={`flex-grow flex flex-col gap-1 overflow-hidden`}>
         <Heading2 

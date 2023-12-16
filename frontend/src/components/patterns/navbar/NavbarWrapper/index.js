@@ -1,1 +1,1 @@
-export {default} from './NavbarContent';
+export {default} from './NavbarWrapper';

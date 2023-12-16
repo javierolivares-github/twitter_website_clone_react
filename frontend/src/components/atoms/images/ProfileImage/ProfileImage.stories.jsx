@@ -10,10 +10,6 @@ export default {
       description: 'Specifies the path to the image.',
       control: 'text',
     },
-    size: {
-      description: 'Specifies the size of the image.',
-      control: 'text',
-    },
   },
 };
 
@@ -21,7 +17,6 @@ export default {
 export const Default = {
   args: {
     imageUrl: "../../../../../assets/profile3.png",
-    size: "48px",
   },
 };
 

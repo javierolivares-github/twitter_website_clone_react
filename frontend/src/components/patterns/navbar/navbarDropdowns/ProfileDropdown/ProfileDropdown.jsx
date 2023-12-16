@@ -5,11 +5,11 @@ import HorizontalBorder from '../../../../atoms/borders/HorizontalBorder';
 import ProfileDropdownItemNewAccount from '../ProfileDropdownItems/ProfileDropdownItemNewAccount';
 import ProfileDropdownItemLogOut from '../ProfileDropdownItems/ProfileDropdownItemLogOut';
 
-const ProfileDropdown = ({ username, account, imageUrl, isDarkTheme, onClick1, onClick2 }) => {
+const ProfileDropdown = ({ username, account, imageUrl, isDarkTheme, onClickNewAcc, onClickLogOut }) => {
   return (
     <div
       data-testid="profiledropdown" 
-      className={`absolute top-2 left-2 w-[320px] rounded-2xl overflow-hidden 
+      className={`absolute bottom-12 left-60 w-[320px] rounded-2xl overflow-hidden 
       flex flex-col ${isDarkTheme ? 'bg-secondary-15 effect-style-dark-bottom' : 'bg-gray-100 effect-style-light-bottom'}`}
     >
       <ProfileDropdownHeader
@@ -22,8 +22,8 @@ const ProfileDropdown = ({ username, account, imageUrl, isDarkTheme, onClick1, o
       <HorizontalBorder isDarkTheme={isDarkTheme}/>
       
       <ul>
-        <ProfileDropdownItemNewAccount isDarkTheme={isDarkTheme} onClick={onClick1} />
-        <ProfileDropdownItemLogOut account={account} isDarkTheme={isDarkTheme} onClick={onClick2} />
+        <ProfileDropdownItemNewAccount isDarkTheme={isDarkTheme} onClick={onClickNewAcc} />
+        <ProfileDropdownItemLogOut account={account} isDarkTheme={isDarkTheme} onClick={onClickLogOut} />
       </ul>
     </div>
   );
@@ -36,8 +36,8 @@ ProfileDropdown.propTypes = {
   account: PropTypes.string,
   imageUrl: PropTypes.string,
   isDarkTheme: PropTypes.bool,
-  onClick1: PropTypes.func,
-  onClick2: PropTypes.func,
+  onClickNewAcc: PropTypes.func,
+  onClickLogOut: PropTypes.func,
 };
 
 ProfileDropdown.defaultProps = {
@@ -45,8 +45,8 @@ ProfileDropdown.defaultProps = {
   account: "@account",
   imageUrl: "../../../../../assets/profile3.png",
   isDarkTheme: false,
-  onClick1: undefined,
-  onClick2: undefined,
+  onClickNewAcc: undefined,
+  onClickLogOut: undefined,
 };
 
 

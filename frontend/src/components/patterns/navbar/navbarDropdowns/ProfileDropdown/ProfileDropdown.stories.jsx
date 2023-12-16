@@ -22,10 +22,10 @@ export default {
       description: 'Specifies the style of the component. If it is true, renders a dark version of the component. If it is false, renders a light version of the component.',
       control: 'boolean',
     },
-    onClick1: {
+    onClickNewAcc: {
       description: 'Event. When the button is clicked, fires the custom function 1.',
     },
-    onClick2: {
+    onClickLogOut: {
       description: 'Event. When the button is clicked, fires the custom function 2.',
     },
   },

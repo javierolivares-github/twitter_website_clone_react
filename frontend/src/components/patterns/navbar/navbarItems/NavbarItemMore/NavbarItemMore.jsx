@@ -5,7 +5,7 @@ import MoreIcon from '../../../../atoms/icons/MoreIcon';
 import Heading1 from '../../../../atoms/headings/Heading1';
 
 
-const NavbarItemMore = ({ isDarkTheme, isActive }) => {
+const NavbarItemMore = ({ isDarkTheme, isActive, onClick }) => {
   return (
     <li 
       data-testid="navbar-item-more-container"
@@ -17,6 +17,7 @@ const NavbarItemMore = ({ isDarkTheme, isActive }) => {
       ${isDarkTheme & !isActive && 'hover:bg-transparent-10'}
       ${isDarkTheme & isActive && 'bg-transparent-25 hover:bg-transparent-25'}
       `}
+      onClick={onClick}
     >
       {/* Icon */}
       {isActive ? 

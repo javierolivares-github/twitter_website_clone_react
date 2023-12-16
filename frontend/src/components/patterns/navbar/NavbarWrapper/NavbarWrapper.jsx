@@ -12,11 +12,11 @@ import NavbarItemProfile from '../navbarItems/NavbarItemProfile';
 import NavbarItemMore from '../navbarItems/NavbarItemMore';
 import NavbarProfile from '../navbarItems/NavbarProfile';
 
-const NavbarWrapper = ({ isDarkTheme, onClickMoon, onClickTweet, imageUrl, username, account, onClickProfile }) => {
+const NavbarWrapper = ({ isDarkTheme, onClickMoon, onClickTweet, imageUrl, username, account, onClickMore , onClickProfile }) => {
   return (
-    <div
+    <nav
       data-testid="navbar-wrapper"
-      className='flex flex-col flex-grow gap-4 p-4 transition-all duration-200 ease-in-out h-screen'
+      className='flex flex-col flex-grow gap-4 p-4 transition-all duration-200 ease-in-out h-screen w-[240px]'
     >
       {/* Navbar header */}
       <header className='flex justify-between items-center py-3'>
@@ -32,7 +32,7 @@ const NavbarWrapper = ({ isDarkTheme, onClickMoon, onClickTweet, imageUrl, usern
         <NavbarItemBookmarks isDarkTheme={isDarkTheme}/>
         <NavbarItemLists isDarkTheme={isDarkTheme}/>
         <NavbarItemProfile isDarkTheme={isDarkTheme}/>
-        <NavbarItemMore isDarkTheme={isDarkTheme}/>
+        <NavbarItemMore isDarkTheme={isDarkTheme} onClick={onClickMore}/>
 
         <TweetButton size="large" isDarkTheme={isDarkTheme} onClick={onClickTweet}>Tweet</TweetButton>
       </ul>
@@ -47,7 +47,7 @@ const NavbarWrapper = ({ isDarkTheme, onClickMoon, onClickTweet, imageUrl, usern
           isDarkTheme={isDarkTheme}
         />
       </footer>
-    </div>
+    </nav>
   )
 };
 
@@ -59,7 +59,8 @@ NavbarWrapper.propTypes = {
   onClickTweet: PropTypes.func, 
   imageUrl: PropTypes.string, 
   username: PropTypes.string, 
-  account: PropTypes.string, 
+  account: PropTypes.string,
+  onClickMore: PropTypes.func,
   onClickProfile: PropTypes.func,
 };
 
@@ -69,7 +70,8 @@ NavbarWrapper.defaultProps = {
   onClickTweet: undefined, 
   imageUrl: "../../../../../assets/profile1.png", 
   username: "Username", 
-  account: "@account", 
+  account: "@account",
+  onClickMore: undefined, 
   onClickProfile: undefined,
 }
 

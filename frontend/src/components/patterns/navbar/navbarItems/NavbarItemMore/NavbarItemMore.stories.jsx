@@ -14,6 +14,9 @@ export default {
       description: 'Specifies whether the component is active or not. When it is active, it has an active CSS style. When it is not, it has a default CSS style.',
       control: 'boolean',
     },
+    onClick: {
+      description: 'Event. When the button is clicked, fires an action.',
+    },
   },
 };
 

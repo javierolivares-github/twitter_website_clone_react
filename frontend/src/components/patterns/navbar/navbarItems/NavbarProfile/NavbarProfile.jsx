@@ -17,7 +17,9 @@ const NavbarProfile = ({ imageUrl, username, account, isDarkTheme, onClick }) =>
       onClick={onClick}
     >
       {/* Image */}
-      <ProfileImage imageUrl={imageUrl} />
+      <div className='w-10 h-10'>
+        <ProfileImage imageUrl={imageUrl}/>
+      </div>
 
       {/* Text */}
       <div className='flex flex-col flex-wrap gap-1'>
