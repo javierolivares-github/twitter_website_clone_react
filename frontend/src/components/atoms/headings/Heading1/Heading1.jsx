@@ -6,7 +6,7 @@ const Heading1 = ({ children, weight, color }) => {
   return (
     <h2 
       data-testid='heading1-container'
-      className={`text-[1.25rem] leading-[1.25rem] tracking-normal ${weight} ${color}`}
+      className={`text-[20px] leading-[1.25rem] tracking-normal ${weight} ${color}`}
     >
       {children}
     </h2>

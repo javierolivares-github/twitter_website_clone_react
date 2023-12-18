@@ -7,11 +7,11 @@ import Body2 from '../../../atoms/headings/Body2';
 import NewsFeedImage from '../../../atoms/images/NewsFeedImage';
 
 
-const NewsFeedItem = ({ title, date, content, trending, hashtag, imageUrl, isDarkTheme }) => {
+const NewsFeedListItem = ({ username, timestamp, content, trending, hashtag, imageUrl, isDarkTheme }) => {
   return (
     // Container
     <div
-      data-testid="newsfeeditem" 
+      data-testid="news-feed-list-item" 
       className={`
         max-w-[460px] w-full p-4 flex justify-start
         items-center gap-2 rounded-2xl overflow-hidden
@@ -31,7 +31,7 @@ const NewsFeedItem = ({ title, date, content, trending, hashtag, imageUrl, isDar
                 ${isDarkTheme && "text-gray-100"}
               `}
             >
-              {title}
+              {username}
             </Heading2>
             <Body2 
               weight="font-normal" 
@@ -40,7 +40,7 @@ const NewsFeedItem = ({ title, date, content, trending, hashtag, imageUrl, isDar
                 ${isDarkTheme && "text-secondary-95"}
               `}
             >
-              {date}
+              {timestamp}
             </Body2>
           </div>
 
@@ -59,15 +59,17 @@ const NewsFeedItem = ({ title, date, content, trending, hashtag, imageUrl, isDar
 
           {/* Row3 Footer */}
           <div className="w-full flex justify-start items-center gap-2">
-            <Body2 
-              weight="font-normal" 
-              color={`
-                ${!isDarkTheme && "text-secondary-50"}
-                ${isDarkTheme && "text-secondary-95"}
-              `}
-            >
-              {trending}
-            </Body2>
+            {trending &&
+              <Body2 
+                weight="font-semibold" 
+                color={`
+                  ${!isDarkTheme && "text-secondary-50"}
+                  ${isDarkTheme && "text-secondary-95"}
+                `}
+              >
+                Trending
+              </Body2>
+            }
             <Body2 
               weight="font-normal" 
               color={`
@@ -89,22 +91,22 @@ const NewsFeedItem = ({ title, date, content, trending, hashtag, imageUrl, isDar
   );
 };
 
-export default NewsFeedItem;
+export default NewsFeedListItem;
 
-NewsFeedItem.propTypes = {
-  title: PropTypes.string, 
-  date: PropTypes.string, 
+NewsFeedListItem.propTypes = {
+  username: PropTypes.string, 
+  timestamp: PropTypes.string, 
   content: PropTypes.string, 
-  trending: PropTypes.string, 
+  trending: PropTypes.bool, 
   hashtag: PropTypes.string, 
   imageUrl: PropTypes.string,
 };
 
-NewsFeedItem.defaultProps = {
-  title: "First Name", 
-  date: "5h ago", 
+NewsFeedListItem.defaultProps = {
+  username: "First Name", 
+  timestamp: "5h ago", 
   content: "Placeholder content goes here!", 
-  trending: "Trending", 
+  trending: true, 
   hashtag: "#hashtag", 
   imageUrl: "../../../../../assets/coffee.jpg",
 }

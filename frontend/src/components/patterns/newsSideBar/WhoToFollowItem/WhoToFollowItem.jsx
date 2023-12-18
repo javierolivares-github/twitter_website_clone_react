@@ -7,7 +7,7 @@ import OfficialIcon from '../../../atoms/icons/OfficialIcon';
 import Body2 from '../../../atoms/headings/Body2';
 import TweetButton from '../../../atoms/buttons/TweetButton';
 
-const WhoToFollowItem = ({ isDarkTheme, imageUrl, username, account  }) => {
+const WhoToFollowItem = ({ isDarkTheme, imageUrl, username, account, onClick  }) => {
   return (
     <div 
       data-testid="follow-item"
@@ -20,9 +20,11 @@ const WhoToFollowItem = ({ isDarkTheme, imageUrl, username, account  }) => {
       <div className={`flex justify-between items-center`}>
         {/* Col1 */}
         <div className={`flex gap-2`}>
+          {/* Image */}
           <div>
             <WhoToFollowImage imageUrl={imageUrl} />
           </div>
+          {/* Texts */}
           <div className={`flex flex-col`}>
             <div className={`flex items-center gap-2`}>
               <Heading2
@@ -54,9 +56,10 @@ const WhoToFollowItem = ({ isDarkTheme, imageUrl, username, account  }) => {
           </div>
         </div>
         {/* Col2 */}
+        {/* Button */}
         <TweetButton
-          onClick={ () => {} }
-          size={`large`}
+          onClick={onClick}
+          size={`small`}
           isDarkTheme={isDarkTheme}
         >
           Follow
@@ -66,4 +69,20 @@ const WhoToFollowItem = ({ isDarkTheme, imageUrl, username, account  }) => {
   )
 }
 
-export default WhoToFollowItem
+export default WhoToFollowItem;
+
+WhoToFollowItem.propTypes = {
+  isDarkTheme: PropTypes.bool, 
+  imageUrl: PropTypes.string, 
+  username: PropTypes.string, 
+  account: PropTypes.string,
+  onClick: PropTypes.func,
+}
+
+WhoToFollowItem.defaultProps = {
+  isDarkTheme: false, 
+  imageUrl: "../../../../../assets/profile1.png", 
+  username: "First name", 
+  account: "@username",
+  onClick: undefined,
+}
