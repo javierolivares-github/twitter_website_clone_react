@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../../../../index.css'
 
-const Error = ({ message }) => {
+const Error = ({ message, color }) => {
   return (
     <p
       data-testid="error"
-      className="text-red-600"
+      className={color}
     >
       <b>{message}</b>
     </p>
@@ -17,8 +17,10 @@ export default Error
 
 Error.propTypes = {
   message: PropTypes.string,
+  color: PropTypes.string,
 }
 
 Error.defaultProps = {
-  message: "Something went wrong!"
+  message: "Error, something went wrong!",
+  color: "text-red-600"
 }

@@ -5,15 +5,22 @@ export default {
   title: 'atoms/States/Error',
   component: Error,
   tags: ['autodocs'],
-  argsTypes: {
-    message: 'Specifies a custom error message.',
-    control: 'text',
+  argTypes: {
+    message: {
+      description: 'Defines a custom error message.',
+      control: 'text',
+    },
+    color: {
+      description: 'Defines a custom color for the error message. It must be CSS or TailwindCSS classes.',
+      control: 'text',
+    },
   }
 }
 
-/** This is de default version of **Error** component. */
+/** This is default version of the **Error** component. */
 export const Default = {
   args: {
-    message: "Oh no, something went wrong!"
+    message: "Oh no, something went wrong!",
+    color: "text-red-700"
   }
 }

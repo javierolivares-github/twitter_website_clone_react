@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../../../../index.css'
-import { statusTypes } from '../../../../statusTypes'
+import { statusTypes } from '../../../../data/statusTypes'
 import Loading from '../../../atoms/states/Loading'
 import Error from '../../../atoms/states/Error'
 import NewsFeedListItem from '../NewsFeedListItem'
 
 const NewsFeedList = ({ status, data, isDarkTheme }) => {
   if (status === statusTypes.loading) {
-    return <Loading />
+    return <Loading color={isDarkTheme ? "text-gray-100" : "text-blue-600"}/>
   }
 
-  if (status === status.error) {
-    return <Error />
+  if (status === statusTypes.error) {
+    return <Error color={isDarkTheme ? "text-gray-100" : "text-red-600"}/>
   }
 
   return (
@@ -41,4 +41,5 @@ export default NewsFeedList
 NewsFeedList.propTypes = {
   status: PropTypes.oneOf(["loading", "error", "loaded"]).isRequired,
   data: PropTypes.array,
+  isDarkTheme: PropTypes.bool,
 }

@@ -1,13 +1,13 @@
 import SectionWrapper from './SectionWrapper';
 
-/** The **SectionWrapper** component is used to wrap other components, applying a flexbox column style. */
+/** The **SectionWrapper** component is used to wrap other components. This component apply a flexbox column style. */
 export default {
   title: 'atoms/Wrappers/SectionWrapper',
   component: SectionWrapper,
   tags: ['autodocs'],
   argTypes: {
     children: {
-      description: 'Specifies the children of the component. It can be any.',
+      description: 'Defines the children of the component.',
     },
   },
 };
