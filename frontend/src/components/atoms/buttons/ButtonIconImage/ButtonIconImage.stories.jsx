@@ -28,4 +28,7 @@ export const Dark = {
   args: {
     isDarkTheme: true,
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };

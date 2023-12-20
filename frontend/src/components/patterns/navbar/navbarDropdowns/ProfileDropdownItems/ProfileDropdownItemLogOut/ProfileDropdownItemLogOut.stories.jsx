@@ -34,4 +34,7 @@ export const Dark = {
     isDarkTheme: true,
     account: "@account",
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };

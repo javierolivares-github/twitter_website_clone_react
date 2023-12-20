@@ -4,7 +4,7 @@ import NavbarWrapper from '../NavbarWrapper';
 import MoreDropdown from '../navbarDropdowns/MoreDropdown';
 import ProfileDropdown from '../navbarDropdowns/ProfileDropdown';
 
-const Navbar = ({ isDarkTheme, imageUrl, username, account }) => {
+const Navbar = ({ imageUrl, username, account }) => {
   const [showMoreDrop, setShowMoreDrop] = useState(false);
   const [showProDrop, setShowProfDrop] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
@@ -68,14 +68,12 @@ const Navbar = ({ isDarkTheme, imageUrl, username, account }) => {
 export default Navbar;
 
 Navbar.propTypes = {
-  isDarkTheme: PropTypes.bool, 
   imageUrl: PropTypes.string, 
   username: PropTypes.string, 
   account: PropTypes.string,
 };
 
 Navbar.defaultProps = {
-  isDarkTheme: false, 
   imageUrl: "../../../../../assets/profile2.png", 
   username: "Jane Doe", 
   account: "@jane28",

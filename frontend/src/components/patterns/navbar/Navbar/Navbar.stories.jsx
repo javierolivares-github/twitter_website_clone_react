@@ -6,10 +6,6 @@ export default {
   component: Navbar,
   tags: ['autodocs'],
   argTypes: {
-    isDarkTheme: {
-      description: 'Specifies the style of the component. If it is true, renders a dark version of the component. If it is false, renders a light version of the component.',
-      control: 'boolean',
-    },
     imageUrl: {
       description: 'Specifies the path to the image.',
       control: "text",
@@ -28,7 +24,6 @@ export default {
 /** This is the light version of the **Navbar** component:*/
 export const NavbarLight = {
   args: {
-    isDarkTheme: false, 
     imageUrl: "../../../../../assets/profile2.png", 
     username: "Jane Doe", 
     account: "@jane28", 
@@ -38,9 +33,11 @@ export const NavbarLight = {
 /** This is the dark version of the **Navbar** component:*/
 export const NavbarDark = {
   args: {
-    isDarkTheme: true, 
     imageUrl: "../../../../../assets/profile2.png", 
     username: "Jane Doe", 
     account: "@jane28", 
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };

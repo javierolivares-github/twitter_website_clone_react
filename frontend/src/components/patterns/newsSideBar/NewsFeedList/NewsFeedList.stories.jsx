@@ -57,6 +57,9 @@ export const LoadedDark = {
     data: newsCollection,
     isDarkTheme: true,
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };
 
 /** This is the loading dark version of the **NewsFeedList** component:*/
@@ -66,6 +69,9 @@ export const LoadingDark = {
     data: newsCollection,
     isDarkTheme: true,
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };
 
 /** This is the error dark version of the **NewsFeedList** component:*/
@@ -74,6 +80,9 @@ export const ErrorDark = {
     status: "error",
     data: newsCollection,
     isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };
 

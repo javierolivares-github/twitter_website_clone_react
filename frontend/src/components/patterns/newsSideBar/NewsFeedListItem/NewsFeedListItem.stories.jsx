@@ -74,6 +74,9 @@ export const Dark = {
     imageUrl: "../../../../../assets/virtualBoy.jpg",
     isDarkTheme: true,
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };
 
 /** This is the dark treding version of the **NewsFeedListItem** component:*/
@@ -86,6 +89,9 @@ export const DarkTrending = {
     hashtag: "#Apple360 #virtualReality",
     imageUrl: "../../../../../assets/virtualBoy.jpg",
     isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };
 

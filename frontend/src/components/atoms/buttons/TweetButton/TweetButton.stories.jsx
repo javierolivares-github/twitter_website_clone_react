@@ -49,6 +49,9 @@ export const DarkLarge = {
     size: "large",
     children: "Tweet",
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };
 
 /** This is the dark small version of the **TweetButton** component:*/
@@ -57,5 +60,8 @@ export const DarkSmall = {
     isDarkTheme: true,
     size: "small",
     children: "Tweet",
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };

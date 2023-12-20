@@ -55,4 +55,7 @@ export const Dark = {
     username: "Jane Doe", 
     account: "@jane28", 
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };

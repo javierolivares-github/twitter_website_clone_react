@@ -1,9 +1,9 @@
-import WhoToFollowItem from './WhoToFollowItem';
+import WhoToFollowListItem from './WhoToFollowListItem';
 
-/** The **WhoToFollowItem** component is used for Who to follow items. */
+/** The **WhoToFollowListItem** component is used for Who to follow items. */
 export default {
-  title: 'patterns/NewsSideBar/WhoToFollowItem',
-  component: WhoToFollowItem,
+  title: 'patterns/NewsSideBar/WhoToFollowListItem',
+  component: WhoToFollowListItem,
   tags: ['autodocs'],
   argTypes: {
     isDarkTheme: {
@@ -28,7 +28,7 @@ export default {
   },
 };
 
-/** This is the light version of the **WhoToFollowItem** component:*/
+/** This is the light version of the **WhoToFollowListItem** component:*/
 export const Light = {
   args: {
     isDarkTheme: false, 
@@ -38,13 +38,16 @@ export const Light = {
   },
 };
 
-/** This is the dark version of the **WhoToFollowItem** component:*/
+/** This is the dark version of the **WhoToFollowListItem** component:*/
 export const Dark = {
   args: {
     isDarkTheme: true, 
     imageUrl: "../../../../../assets/profile2.png", 
     username: "Jane Doe", 
     account: "@janedoe27",
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };
 

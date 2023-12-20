@@ -39,6 +39,9 @@ export const DarkDefault = {
     isDarkTheme: true,
     isActive: false,
   },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
 };
 
 /** This is the dark active version of the **NavbarItemExplore** component:*/
@@ -46,5 +49,8 @@ export const DarkActive = {
   args: {
     isDarkTheme: true,
     isActive: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };

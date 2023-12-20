@@ -15,10 +15,20 @@ export default {
   }
 };
 
-/** This is the default version of the **NewsFeed** component:*/
-export const Default = {
+/** This is the light version of the **NewsFeed** component:*/
+export const Light = {
   args: {
     isDarkTheme: false,
+  },
+};
+
+/** This is the dark version of the **NewsFeed** component:*/
+export const Dark = {
+  args: {
+    isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 };
 

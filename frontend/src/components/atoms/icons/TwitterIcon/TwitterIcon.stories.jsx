@@ -24,3 +24,4 @@ export const Default = {
     size: '24',
   },
 };
+

@@ -7,7 +7,7 @@ import OfficialIcon from '../../../atoms/icons/OfficialIcon';
 import Body2 from '../../../atoms/headings/Body2';
 import TweetButton from '../../../atoms/buttons/TweetButton';
 
-const WhoToFollowItem = ({ isDarkTheme, imageUrl, username, account, onClick  }) => {
+const WhoToFollowListItem = ({ isDarkTheme, imageUrl, username, account, onClick  }) => {
   return (
     <div 
       data-testid="follow-item"
@@ -69,9 +69,9 @@ const WhoToFollowItem = ({ isDarkTheme, imageUrl, username, account, onClick  })
   )
 }
 
-export default WhoToFollowItem;
+export default WhoToFollowListItem;
 
-WhoToFollowItem.propTypes = {
+WhoToFollowListItem.propTypes = {
   isDarkTheme: PropTypes.bool, 
   imageUrl: PropTypes.string, 
   username: PropTypes.string, 
@@ -79,7 +79,7 @@ WhoToFollowItem.propTypes = {
   onClick: PropTypes.func,
 }
 
-WhoToFollowItem.defaultProps = {
+WhoToFollowListItem.defaultProps = {
   isDarkTheme: false, 
   imageUrl: "../../../../../assets/profile1.png", 
   username: "First name", 
