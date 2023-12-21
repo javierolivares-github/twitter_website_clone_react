@@ -1,4 +1,4 @@
-export const statusTweetTypes = {
+export const tweetTypes = {
   none: "none",
   liked: "liked",
   retweeted: "retweeted",
