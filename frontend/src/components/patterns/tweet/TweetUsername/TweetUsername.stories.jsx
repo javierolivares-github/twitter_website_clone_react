@@ -22,6 +22,10 @@ export default {
       description: 'Defines the timestamp',
       control: 'text',
     },
+    handleMenu: {
+      description: 'Function that is activated when the user click button menu.',
+      action: 'Fires handleMenu!',
+    },
     isDarkTheme: {
       description: 'Specifies the theme of the component. If isDarkTheme is true, renders a dark version of the component. If is false, renders a light version of the component.',
       control: 'boolean',

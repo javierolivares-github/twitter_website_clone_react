@@ -6,7 +6,7 @@ import OfficialIcon from '../../../atoms/icons/OfficialIcon'
 import Body2 from '../../../atoms/headings/Body2'
 import ButtonIconMenu from '../../../atoms/buttons/ButtonIconMenu'
 
-const TweetUsername = ({ username, account, verified, timestamp, isDarkTheme }) => {
+const TweetUsername = ({ username, account, verified, timestamp, isDarkTheme, handleMenu }) => {
   return (
     <div className={`max-w-[568px] flex justify-between items-center `}>
       
@@ -33,7 +33,7 @@ const TweetUsername = ({ username, account, verified, timestamp, isDarkTheme }) 
       </div>
 
       {/* col2 */}
-      <ButtonIconMenu isDarkTheme={isDarkTheme} />
+      <ButtonIconMenu isDarkTheme={isDarkTheme} onClick={handleMenu} />
 
     </div>
   )
@@ -47,6 +47,7 @@ TweetUsername.propTypes = {
   verified: PropTypes.bool, 
   timestamp: PropTypes.string.isRequired, 
   isDarkTheme: PropTypes.bool,
+  handleMenu: PropTypes.func,
 }
 
 TweetUsername.defaultProps = {
@@ -55,4 +56,5 @@ TweetUsername.defaultProps = {
   verified: false, 
   timestamp: "5h ago", 
   isDarkTheme: false,
+  handleMenu: undefined,
 }
