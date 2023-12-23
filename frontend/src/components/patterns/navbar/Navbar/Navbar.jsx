@@ -1,10 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import NavbarWrapper from '../NavbarWrapper';
 import MoreDropdown from '../navbarDropdowns/MoreDropdown';
 import ProfileDropdown from '../navbarDropdowns/ProfileDropdown';
+import { statusTypes } from '../../../../data/statusTypes';
 
-const Navbar = ({ imageUrl, username, account }) => {
+const Navbar = () => {
+  const [profileState, setProfileState] = useState({
+    status: statusTypes.loading,
+    data: [],
+  });
+  console.log(profileState)
   const [showMoreDrop, setShowMoreDrop] = useState(false);
   const [showProDrop, setShowProfDrop] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
@@ -28,6 +34,27 @@ const Navbar = ({ imageUrl, username, account }) => {
     setDarkTheme(!darkTheme);
   };
 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const profileFetch = await fetch('/api/profile');
+        const profileResponse = await profileFetch.json();
+        setProfileState({
+          status: statusTypes.loaded,
+          data: profileResponse,
+        });
+      } catch (error) {
+        console.log(error);
+        setProfileState({
+          status: statusTypes.error,
+          data: [],
+        })
+      }
+    }
+
+    getData();
+  }, [])
+
 
   return (
     <aside 
@@ -36,9 +63,8 @@ const Navbar = ({ imageUrl, username, account }) => {
       {/* Navbar wrapper */}
       <NavbarWrapper
         isDarkTheme={darkTheme}
-        imageUrl={imageUrl}
-        username={username}
-        account={account}
+        status={profileState.status}
+        data={profileState.data}
         onClickMoon={toggleDarkTheme}
         onClickMore={handleClickMoreBtn}
         onClickTweet={handleClickTweetBtn}
@@ -54,9 +80,9 @@ const Navbar = ({ imageUrl, username, account }) => {
       {showProDrop && (
         <ProfileDropdown
           isDarkTheme={darkTheme}
-          imageUrl={imageUrl}
-          username={username}
-          account={account}
+          imageUrl={profileState.data[0].imageUrl}
+          username={profileState.data[0].username}
+          account={profileState.data[0].account}
           onClickNewAcc={hideProfDrop}
           onClickLogOut={hideProfDrop}
         />
@@ -66,15 +92,3 @@ const Navbar = ({ imageUrl, username, account }) => {
 };
 
 export default Navbar;
-
-Navbar.propTypes = {
-  imageUrl: PropTypes.string, 
-  username: PropTypes.string, 
-  account: PropTypes.string,
-};
-
-Navbar.defaultProps = {
-  imageUrl: "../../../../../assets/profile2.png", 
-  username: "Jane Doe", 
-  account: "@jane28",
-}

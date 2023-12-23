@@ -1,4 +1,5 @@
 import NavbarWrapper from './NavbarWrapper';
+import {profile} from '../../../../data/profile'
 
 /** The **NavbarWrapper** component renders a navbar's content. When the component is hovered over, it changes to its hover style. Clicking on the component activates a function, which its passed via props. */
 export default {
@@ -22,38 +23,75 @@ export default {
     onClickMore: {
       description: 'Event. When the button More is clicked, fires a function that shows the more dropdown.',
     },
-    imageUrl: {
-      description: 'Specifies the path to the image.',
-      control: "text",
+    status: {
+      description: 'Defines the state of the data.',
+      control: "select",
+      options: ["loading", "error", "loaded"],
     },
-    username: {
-      description: 'Specifies the username.',
-      control: "text",
-    },
-    account: {
-      description: 'Specifies the account name.',
-      control: "text",
+    data: {
+      description: 'Receive data.',
+      control: "object",
     },
   },
 };
 
-/** This is the light version of the **NavbarWrapper** component:*/
-export const Light = {
+/** This is the loaded light version of the **NavbarWrapper** component:*/
+export const LoadedLight = {
   args: {
     isDarkTheme: false, 
-    imageUrl: "../../../../../assets/profile2.png", 
-    username: "Jane Doe", 
-    account: "@jane28", 
+    status: "loaded",
+    data: profile,
   },
 };
 
-/** This is the dark version of the **NavbarWrapper** component:*/
-export const Dark = {
+/** This is the loading light version of the **NavbarWrapper** component:*/
+export const LoadingLight = {
+  args: {
+    isDarkTheme: false, 
+    status: "loading",
+    data: [],
+  },
+};
+
+/** This is the error light version of the **NavbarWrapper** component:*/
+export const ErrorLight = {
+  args: {
+    isDarkTheme: false, 
+    status: "error",
+    data: [],
+  },
+};
+
+/** This is the loaded dark version of the **NavbarWrapper** component:*/
+export const LoadedDark = {
   args: {
     isDarkTheme: true, 
-    imageUrl: "../../../../../assets/profile2.png", 
-    username: "Jane Doe", 
-    account: "@jane28", 
+    state: "loaded",
+    data: profile,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+};
+
+/** This is the loading dark version of the **NavbarWrapper** component:*/
+export const LoadingDark = {
+  args: {
+    isDarkTheme: true, 
+    status: "loading",
+    data: [],
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+};
+
+/** This is the error dark version of the **NavbarWrapper** component:*/
+export const ErrorDark = {
+  args: {
+    isDarkTheme: true, 
+    status: "error",
+    data: [],
   },
   parameters: {
     backgrounds: { default: 'dark' },

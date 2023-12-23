@@ -16,7 +16,7 @@ const WhoToFollow = ({ isDarkTheme, onClick }) => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const followFetch = await fetch('/api/who-to-follow');
+        const followFetch = await fetch('/api/users');
         const followResponse = await followFetch.json();
         setWhoToFollowState({
           data: followResponse.data,

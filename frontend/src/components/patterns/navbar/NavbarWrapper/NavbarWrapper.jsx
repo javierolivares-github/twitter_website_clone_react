@@ -10,9 +10,9 @@ import NavbarItemBookmarks from '../navbarItems/NavbarItemBookmarks';
 import NavbarItemLists from '../navbarItems/NavbarItemLists';
 import NavbarItemProfile from '../navbarItems/NavbarItemProfile';
 import NavbarItemMore from '../navbarItems/NavbarItemMore';
-import NavbarProfile from '../navbarItems/NavbarProfile';
+import NavbarProfile from '../NavbarProfile';
 
-const NavbarWrapper = ({ isDarkTheme, onClickMoon, onClickTweet, imageUrl, username, account, onClickMore , onClickProfile }) => {
+const NavbarWrapper = ({ isDarkTheme, status, data, onClickMoon, onClickTweet, onClickMore , onClickProfile }) => {
   return (
     <nav
       data-testid="navbar-wrapper"
@@ -40,10 +40,9 @@ const NavbarWrapper = ({ isDarkTheme, onClickMoon, onClickTweet, imageUrl, usern
       {/* Navbar footer */}
       <footer className='flex flex-col flex-grow justify-end h-full'>
         <NavbarProfile
-          account={account}
-          imageUrl={imageUrl}
+          status={status}
+          data={data}
           onClick={onClickProfile}
-          username={username}
           isDarkTheme={isDarkTheme}
         />
       </footer>
@@ -55,11 +54,10 @@ export default NavbarWrapper;
 
 NavbarWrapper.propTypes = {
   isDarkTheme: PropTypes.bool,
+  status: PropTypes.oneOf(["loading", "error", "loaded"]),
+  data: PropTypes.array,
   onClickMoon: PropTypes.func, 
-  onClickTweet: PropTypes.func, 
-  imageUrl: PropTypes.string, 
-  username: PropTypes.string, 
-  account: PropTypes.string,
+  onClickTweet: PropTypes.func,  
   onClickMore: PropTypes.func,
   onClickProfile: PropTypes.func,
 };
@@ -67,10 +65,7 @@ NavbarWrapper.propTypes = {
 NavbarWrapper.defaultProps = {
   isDarkTheme: false,
   onClickMoon: undefined, 
-  onClickTweet: undefined, 
-  imageUrl: "../../../../../assets/profile1.png", 
-  username: "Username", 
-  account: "@account",
+  onClickTweet: undefined,
   onClickMore: undefined, 
   onClickProfile: undefined,
 }

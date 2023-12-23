@@ -28,15 +28,6 @@ export const newsCollection = [
   },
   {
     id: 4,
-    imageUrl: '../../../../../assets/joga.jpg',
-    username: 'Jane Doe',
-    content: 'Enjoy the connection with nature while practicing yoga outdoors.🧘‍♀️',
-    timestamp: '7h',
-    hashtag: '#YogaOutdoors #Joga',
-    trending: false,
-  },
-  {
-    id: 5,
 		imageUrl : '../../../../../assets/Gatsby.png',
 		username  : 'Gatsby',
 		content  :
@@ -46,7 +37,7 @@ export const newsCollection = [
     trending: true,
 	},
   {
-    id: 6,
+    id: 5,
 		imageUrl : '../../../../../assets/FigmaConfig.jpg',
 		username  : 'Figma',
 		content  :
@@ -55,4 +46,13 @@ export const newsCollection = [
 		timestamp     : '17h',
     trending: true,
 	},
+  {
+    id: 6,
+    imageUrl: '../../../../../assets/joga.jpg',
+    username: 'Jane Doe',
+    content: 'Enjoy the connection with nature while practicing yoga outdoors.🧘‍♀️',
+    timestamp: '7h',
+    hashtag: '#YogaOutdoors #Joga',
+    trending: false,
+  },
 ];

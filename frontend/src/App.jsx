@@ -1,12 +1,13 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Navbar from './components/patterns/navbar/Navbar';
 import Home from './components/screens/Home'
 
 const App = () => {
   return (
     <>
-      <h1>App</h1>
+      <div></div>
     </>
   )
 }

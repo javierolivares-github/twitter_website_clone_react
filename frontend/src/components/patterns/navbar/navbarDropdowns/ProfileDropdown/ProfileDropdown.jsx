@@ -5,7 +5,7 @@ import HorizontalBorder from '../../../../atoms/borders/HorizontalBorder';
 import ProfileDropdownItemNewAccount from '../ProfileDropdownItems/ProfileDropdownItemNewAccount';
 import ProfileDropdownItemLogOut from '../ProfileDropdownItems/ProfileDropdownItemLogOut';
 
-const ProfileDropdown = ({ username, account, imageUrl, isDarkTheme, onClickNewAcc, onClickLogOut }) => {
+const ProfileDropdown = ({ status, data, isDarkTheme, onClickNewAcc, onClickLogOut }) => {
   return (
     <div
       data-testid="profiledropdown" 
@@ -13,9 +13,8 @@ const ProfileDropdown = ({ username, account, imageUrl, isDarkTheme, onClickNewA
       flex flex-col ${isDarkTheme ? 'bg-secondary-15 effect-style-dark-bottom' : 'bg-gray-100 effect-style-light-bottom'}`}
     >
       <ProfileDropdownHeader
-        account={account}
-        imageUrl={imageUrl}
-        username={username}
+        status={status}
+        data={data}
         isDarkTheme={isDarkTheme}
       />
 
@@ -23,7 +22,7 @@ const ProfileDropdown = ({ username, account, imageUrl, isDarkTheme, onClickNewA
       
       <ul>
         <ProfileDropdownItemNewAccount isDarkTheme={isDarkTheme} onClick={onClickNewAcc} />
-        <ProfileDropdownItemLogOut account={account} isDarkTheme={isDarkTheme} onClick={onClickLogOut} />
+        <ProfileDropdownItemLogOut account={data[0]?.account} isDarkTheme={isDarkTheme} onClick={onClickLogOut} />
       </ul>
     </div>
   );
@@ -32,18 +31,14 @@ const ProfileDropdown = ({ username, account, imageUrl, isDarkTheme, onClickNewA
 export default ProfileDropdown;
 
 ProfileDropdown.propTypes = {
-  username: PropTypes.string,
-  account: PropTypes.string,
-  imageUrl: PropTypes.string,
+  status: PropTypes.oneOf(["loading", "error", "loaded"]),
+  data: PropTypes.array,
   isDarkTheme: PropTypes.bool,
   onClickNewAcc: PropTypes.func,
   onClickLogOut: PropTypes.func,
 };
 
 ProfileDropdown.defaultProps = {
-  username: "Username",
-  account: "@account",
-  imageUrl: "../../../../../assets/profile3.png",
   isDarkTheme: false,
   onClickNewAcc: undefined,
   onClickLogOut: undefined,

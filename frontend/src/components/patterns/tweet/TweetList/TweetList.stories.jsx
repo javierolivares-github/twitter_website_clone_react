@@ -49,3 +49,39 @@ export const ErrorLight = {
     isDarkTheme: false,
   },
 };
+
+/** This is the loaded dark version of the **TweetList** component:*/
+export const LoadedDark = {
+  args: {
+    status: "loaded",
+    data: tweetCollection,
+    isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+};
+
+/** This is the loading dark version of the **TweetList** component:*/
+export const LoadingDark = {
+  args: {
+    status: "loading",
+    data: tweetCollection,
+    isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+};
+
+/** This is the error dark version of the **TweetList** component:*/
+export const ErrorDark = {
+  args: {
+    status: "error",
+    data: tweetCollection,
+    isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+};

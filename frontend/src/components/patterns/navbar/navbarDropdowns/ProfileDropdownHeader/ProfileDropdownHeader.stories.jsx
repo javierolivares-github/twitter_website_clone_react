@@ -1,4 +1,5 @@
-import ProfileDropdownHeader from './ProfileDropdownHeader';
+import ProfileDropdownHeader from './ProfileDropdownHeader'
+import {profile} from '../../../../../data/profile'
 
 /** The **ProfileDropdownHeader** component renders a dropdown header. */
 export default {
@@ -6,41 +7,54 @@ export default {
   component: ProfileDropdownHeader,
   tags: ['autodocs'],
   argTypes: {
-    imageUrl: {
-      description: 'Specifies the path to the image.',
-      control: 'text',
+    status: {
+      description: 'Defines the state of data',
+      control: 'select',
+      options: ["loading", "error", "loaded"]
     },
-    username: {
-      description: 'Specifies the name of the user.',
-      control: 'text',
-    },
-    account: {
-      description: 'Specifies the name of the account.',
-      control: 'text',
+    data: {
+      description: 'Receive data.',
+      control: 'object',
     },
     isDarkTheme: {
-      description: 'Specifies the style of the component. If it is true, renders a dark version of the component. If it is false, renders a light version of the component.',
+      description: 'Defines the theme of the component. If it is true, renders a dark version of the component. If it is false, renders a light version of the component.',
       control: 'boolean',
     },
   },
-};
+}
 
-/** This is the light version of the **ProfileDropdownHeader** component:*/
-export const Light = {
+/** This is the loaded light version of the **ProfileDropdownHeader** component:*/
+export const LoadedLight = {
   args: {
-    imageUrl: "../../../../../assets/profile2.png",
-    username: "Jane Doe",
-    account: "@janedoe32",
+    status: "loaded",
+    data: profile,
     isDarkTheme: false,
   },
 };
 
-/** This is the dark version of the **ProfileDropdownHeader** component:*/
-export const Dark = {
+/** This is the loading light version of the **ProfileDropdownHeader** component:*/
+export const LoadingLight = {
   args: {
-    imageUrl: "../../../../../assets/profile2.png",
-    username: "Jane Doe",
-    account: "@janedoe32",
+    status: "loading",
+    data: [],
+    isDarkTheme: false,
+  },
+};
+
+/** This is the error light version of the **ProfileDropdownHeader** component:*/
+export const ErrorLight = {
+  args: {
+    status: "error",
+    data: [],
+    isDarkTheme: false,
+  },
+};
+
+/** This is the loaded dark version of the **ProfileDropdownHeader** component:*/
+export const LoadedDark = {
+  args: {
+    status: "loaded",
+    data: profile,
     isDarkTheme: true,
   },
   parameters: {

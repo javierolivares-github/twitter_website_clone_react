@@ -1,5 +1,5 @@
 import WhoToFollowList from './WhoToFollowList';
-import { followCollection } from '../../../../data/followCollection';
+import { usersCollection } from '../../../../data/usersCollection';
 
 /** The **WhoToFollowList** component renders a list of users who to follow. This component has three states: loading, error, and loaded. Loading state shows a loading message. Error state shows an error message. Loaded state renders the component with the data recieved.*/
 export default {
@@ -30,7 +30,7 @@ export default {
 export const LoadedLight = {
   args: {
     status: "loaded",
-    data: followCollection,
+    data: usersCollection,
     isDarkTheme: false,
   },
 };
@@ -57,7 +57,7 @@ export const ErrorLight = {
 export const LoadedDark = {
   args: {
     status: "loaded",
-    data: followCollection,
+    data: usersCollection,
     isDarkTheme: true,
   },
   parameters: {

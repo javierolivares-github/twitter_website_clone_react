@@ -16,7 +16,7 @@ const TweetList = ({ status, data, isDarkTheme }) => {
   }
 
   return (
-    <div className={`flex flex-col gap-4 p-4`}>
+    <div className={`inline-flex flex-col gap-4`}>
       {data.map((tweet) => (
         <TweetCard
           state={tweet.state}
@@ -31,6 +31,7 @@ const TweetList = ({ status, data, isDarkTheme }) => {
           commentAmount={tweet.commentAmount}
           retweetAmount={tweet.retweetAmount}
           likeAmount={tweet.likeAmount}
+          isDarkTheme={isDarkTheme}
         />
       ))}
     </div>

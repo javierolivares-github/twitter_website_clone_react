@@ -1,4 +1,4 @@
-export const followCollection = [
+export const usersCollection = [
   {
     id: 1,
 		imageUrl : '../../../../../assets/Google.jpg',

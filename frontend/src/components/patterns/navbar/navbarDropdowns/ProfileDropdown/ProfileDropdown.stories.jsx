@@ -1,4 +1,5 @@
-import ProfileDropdown from './ProfileDropdown';
+import ProfileDropdown from './ProfileDropdown'
+import {profile} from '../../../../../data/profile'
 
 /** The **ProfileDropdown** component renders a profile's dropdown. */
 export default {
@@ -6,17 +7,14 @@ export default {
   component: ProfileDropdown,
   tags: ['autodocs'],
   argTypes: {
-    imageUrl: {
-      description: 'Specifies the path to the image.',
-      control: 'text',
+    status: {
+      description: 'Defines the state of data',
+      control: 'select',
+      options: ["loading", "error", "loaded"]
     },
-    username: {
-      description: 'Specifies the name of the user.',
-      control: 'text',
-    },
-    account: {
-      description: 'Specifies the name of the account.',
-      control: 'text',
+    data: {
+      description: 'Receive data.',
+      control: 'object',
     },
     isDarkTheme: {
       description: 'Specifies the style of the component. If it is true, renders a dark version of the component. If it is false, renders a light version of the component.',
@@ -31,22 +29,61 @@ export default {
   },
 };
 
-/** This is the light version of the **ProfileDropdown** component:*/
-export const Light = {
+/** This is the loaded light version of the **ProfileDropdown** component:*/
+export const LoadedLight = {
   args: {
-    imageUrl: "../../../../../assets/profile2.png",
-    username: "Jane Doe",
-    account: "@janedoe32",
+    status: "loaded",
+    data: profile,
     isDarkTheme: false,
   },
 };
 
-/** This is the dark version of the **ProfileDropdown** component:*/
-export const Dark = {
+/** This is the loading light version of the **ProfileDropdown** component:*/
+export const LoadingLight = {
   args: {
-    imageUrl: "../../../../../assets/profile2.png",
-    username: "Jane Doe",
-    account: "@janedoe32",
+    status: "loading",
+    data: [],
+    isDarkTheme: false,
+  },
+};
+
+/** This is the error light version of the **ProfileDropdown** component:*/
+export const ErrorLight = {
+  args: {
+    status: "error",
+    data: [],
+    isDarkTheme: false,
+  },
+};
+
+/** This is the loaded dark version of the **ProfileDropdown** component:*/
+export const LoadedDark = {
+  args: {
+    status: "loaded",
+    data: profile,
+    isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+};
+
+/** This is the loading dark version of the **ProfileDropdown** component:*/
+export const LoadingDark = {
+  args: {
+    status: "loading",
+    data: [],
+    isDarkTheme: true,
+  },
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+};
+/** This is the Error dark version of the **ProfileDropdown** component:*/
+export const ErrorDark = {
+  args: {
+    status: "error",
+    data: [],
     isDarkTheme: true,
   },
   parameters: {
