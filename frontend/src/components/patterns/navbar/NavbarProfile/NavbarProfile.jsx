@@ -6,12 +6,12 @@ import MenuIcon from '../../../atoms/icons/MenuIcon';
 import Heading2 from '../../../atoms/headings/Heading2';
 import Body2 from '../../../atoms/headings/Body2';
 import { statusTypes } from '../../../../data/statusTypes'
-import Loading from '../../../atoms/states/Loading'
+import ProfileLoading from '../../../atoms/states/ProfileLoading'
 import Error from '../../../atoms/states/Error'
 
 const NavbarProfile = ({ status, data, isDarkTheme, onClick }) => {
   if (status === statusTypes.loading) {
-    return <Loading color={isDarkTheme ? "text-gray-100" : "text-blue-600"} message={`Loading profile data...`}/>
+    return <ProfileLoading isDarkTheme={isDarkTheme}/>
   }
 
   if (status === statusTypes.error) {
