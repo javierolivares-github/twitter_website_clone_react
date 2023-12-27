@@ -29,19 +29,19 @@ const NavbarProfile = ({ status, data, isDarkTheme, onClick }) => {
     >
       {/* Image */}
       <div className='w-10 h-10'>
-        <ProfileImage imageUrl={data[0].imageUrl}/>
+        <ProfileImage imageUrl={data[0]?.imageUrl}/>
       </div>
 
       {/* Text */}
       <div className='flex flex-col flex-wrap gap-1'>
         {/* text: username */}
         <Heading2 weight="font-bold" color={isDarkTheme ? "text-gray-100" : "text-secondary-25"} >
-          {data[0].username}
+          {data[0]?.username}
         </Heading2>
 
         {/* text: account */}
         <Body2 weight="font-normal" color={isDarkTheme ? "text-gray-100" : "text-secondary-40"} >
-          {data[0].account}
+          {data[0]?.account}
         </Body2>
       </div>
       

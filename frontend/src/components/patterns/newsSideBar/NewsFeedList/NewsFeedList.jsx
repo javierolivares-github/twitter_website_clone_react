@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../../../../index.css'
 import { statusTypes } from '../../../../data/statusTypes'
-import Loading from '../../../atoms/states/Loading'
+import NewsFeedListLoading from '../NewsFeedListLoading'
 import Error from '../../../atoms/states/Error'
 import NewsFeedListItem from '../NewsFeedListItem'
 
 const NewsFeedList = ({ status, data, isDarkTheme }) => {
   if (status === statusTypes.loading) {
-    return <Loading color={isDarkTheme ? "text-gray-100" : "text-blue-600"}/>
+    return <NewsFeedListLoading isDarkTheme={isDarkTheme} />
   }
 
   if (status === statusTypes.error) {

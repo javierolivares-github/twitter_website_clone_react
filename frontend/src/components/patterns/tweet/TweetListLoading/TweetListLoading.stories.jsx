@@ -1,9 +1,9 @@
-import TweetCardLoading from './TweetCardLoading'
+import TweetListLoading from './TweetListLoading'
 
-/** The **TweetCardLoading** component renders the TweetCardLoading component. */
+/** The **TweetListLoading** component renders the TweetListLoading component. */
 export default {
-  title: 'atoms/States/TweetCardLoading',
-  component: TweetCardLoading,
+  title: 'patterns/Tweet/TweetListLoading',
+  component: TweetListLoading,
   tags: ['autodocs'],
   argTypes: {
     isDarkTheme: {
@@ -13,14 +13,14 @@ export default {
   }
 }
 
-/** This is light version of **TweetCardLoading** component. */
+/** This is light version of **TweetListLoading** component. */
 export const Light = {
   args: {
     isDarkTheme: false
   }
 }
 
-/** This is dark version of **TweetCardLoading** component. */
+/** This is dark version of **TweetListLoading** component. */
 export const Dark = {
   args: {
     isDarkTheme: true

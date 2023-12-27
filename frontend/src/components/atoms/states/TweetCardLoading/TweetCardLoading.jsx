@@ -35,21 +35,33 @@ const TweetCardLoading = ({ isDarkTheme }) => {
 
       {/* tweet-content */}
       <div className={`flex items-center gap-2`}>
-        <div className={`flex flex-col gap-4`}>
+        <div className={`flex flex-col gap-4 flex-grow`}>
           {/* rectangle-1 */}
           <div className={`w-[20rem] h-[0.875rem] rounded-2xl
           ${isDarkTheme ? "placeholder-animation-dark" : "placeholder-animation"}`}></div>
 
-          {/* image */}
+          {/* content-image */}
           <div className={`w-full h-[12.625rem] rounded-2xl
           ${isDarkTheme ? "placeholder-animation-dark" : "placeholder-animation"}`}></div>
         </div>
       </div>
 
       {/* tweet-analytics */}
-      
+      <div className={`flex items-center gap-2`}>
+        {/* rectangle-1 */}
+        <div className={`w-12 h-6 rounded-2xl
+        ${isDarkTheme ? "placeholder-animation-dark" : "placeholder-animation"}`}></div>
+        {/* rectangle-2 */}
+        <div className={`w-12 h-6 rounded-2xl
+        ${isDarkTheme ? "placeholder-animation-dark" : "placeholder-animation"}`}></div>
+        {/* rectangle-3 */}
+        <div className={`w-12 h-6 rounded-2xl
+        ${isDarkTheme ? "placeholder-animation-dark" : "placeholder-animation"}`}></div>
+        {/* rectangle-4 */}
+        <div className={`w-12 h-6 rounded-2xl
+        ${isDarkTheme ? "placeholder-animation-dark" : "placeholder-animation"}`}></div>
+      </div>
     
-
     </div>
   )
 }

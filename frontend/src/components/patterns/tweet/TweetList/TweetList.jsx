@@ -5,10 +5,11 @@ import { statusTypes } from '../../../../data/statusTypes'
 import Loading from '../../../atoms/states/Loading'
 import Error from '../../../atoms/states/Error'
 import TweetCard from '../TweetCard'
+import TweetListLoading from '../TweetListLoading'
 
 const TweetList = ({ status, data, isDarkTheme }) => {
   if (status === statusTypes.loading) {
-    return <Loading color={isDarkTheme ? "text-gray-100" : "text-blue-600"}/>
+    return <TweetListLoading isDarkTheme={isDarkTheme} />
   }
 
   if (status === statusTypes.error) {
